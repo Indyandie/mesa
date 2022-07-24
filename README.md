@@ -24,10 +24,10 @@ The closing table fence may be preceded by up to three spaces of indentation, an
 
 ```
 ,,,
-1    , 2    , 3
-one  , two	, three
-uno  , dos	, tres
-ichi , ni   , san
+1    , 2   , 3
+one  , two , three
+uno  , dos , tres
+ichi , ni  , san
 ,,,
 ```
 
