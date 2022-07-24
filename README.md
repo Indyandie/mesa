@@ -41,6 +41,8 @@ pipe      | "|"  | Yes
 ,,,
 ```
 
+### Whitespace
+
 > Trailing whitespace is ignore
 
 ```
@@ -63,8 +65,8 @@ onyx       , rock     , 🐍 🪨
 ,,,
 pokemon,type,emoji
 pikachu,electric,🐭 ⚡️
-charmander,fire, 🦎 🔥
-onyx,rock, 🐍 🪨
+charmander,fire,🦎 🔥
+onyx,rock,🐍 🪨
 ,,,
 ```
 
