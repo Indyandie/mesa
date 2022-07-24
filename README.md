@@ -6,7 +6,7 @@ This implementation was inspired by fenced `code block`, the [csv format][rfc418
 
 A __table fence__ would be a sequence of at least 3 consecutive commas "`,`". A table begins with a __table fence__, preceded by no spaces.
 
-[[rfc4180]: https://datatracker.ietf.org/doc/html/rfc4180z
+[rfc4180]: https://datatracker.ietf.org/doc/html/rfc4180z
 The contents of a table follow the [csv format][rfc4180] guidelines with some necessary differences. 
 - Trailing spaces are not considered part of a field and should be ignored.
 - The first record is always the header line, the `<thead>`.
