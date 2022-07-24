@@ -31,6 +31,62 @@ ichi , ni  , san
 ,,,
 ```
 
+```html
+<table>
+  <thead>
+    <tr>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>one</td>
+      <td>two</td>
+      <td>three</td>
+    </tr>
+    <tr>
+      <td>uno</td>
+      <td>dos</td>
+      <td>tres</td>
+    </tr>
+    <tr>
+      <td>ichi</td>
+      <td>ni</td>
+      <td>san</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+<table>
+  <thead>
+    <tr>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>one</td>
+      <td>two</td>
+      <td>three</td>
+    </tr>
+    <tr>
+      <td>uno</td>
+      <td>dos</td>
+      <td>tres</td>
+    </tr>
+    <tr>
+      <td>ichi</td>
+      <td>ni</td>
+      <td>san</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Using pipes `|`
 
 ```
