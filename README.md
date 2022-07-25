@@ -409,7 +409,7 @@ It doesn't look great but i really like the functionality. Perhaps some sort of 
 name       , block
 list       , "- apple\n- bear\n- cat"
 code block , "```shell\n# some code\n```"
-headings   , "# Heading\n## Another Heading"
+headings   , "# Header\n## Another Header"
 ,,,
 ```
 
