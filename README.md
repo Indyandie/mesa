@@ -1,6 +1,7 @@
 # Markdown Table
 
-This implementation was inspired by fenced `code block`, the [csv format][rfc4180] guidelines, and of course existing `table` extensions. 
+[fcb]: https://spec.commonmark.org/0.30/#fenced-code-blocks
+This implementation was inspired by fenced [`code block`][fcb], the [csv format][rfc4180] guidelines, and of course existing `table` extensions. 
 
 ## Proposal
 
@@ -11,13 +12,13 @@ The contents of a table follow the [csv format][rfc4180] guidelines with some ne
 - Trailing spaces are not considered part of a field and should be ignored.
 - The first record is always the header line, the `<thead>`.
 
-A comma "`,`" or pipe "`|`" character can be used to separate values, a delimiter. To include a delimier (comma `,` or pipe `|`) as character in a field enclose the entire field in double-quotes `"`. 
+A comma `,` or pipe `|` character can be used to separate values, a delimiter. To include a delimier (comma `,` or pipe `|`) as character in a field enclose the entire field in double-quotes `"`. 
 
-> A delimiter must be used consistantly per row (record.)
+> A delimiter must be used consistently per row (record).
 
 Inline markdown is supported on individual fields. Block elements could potentially be supported inside of fields enclosed with double-quotes.
 
-The closing table fence may be preceded by up to three spaces of indentation, and may be followed only by spaces or tabs, which are ignored.
+The closing __table fence__ may be preceded by up to 3 spaces of indentation, and may be followed only by spaces or tabs, which are ignored.
 
 
 ### A basic table
