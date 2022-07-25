@@ -1,18 +1,18 @@
 # Markdown Table
 
 [fcb]: https://spec.commonmark.org/0.30/#fenced-code-blocks
-This implementation was inspired by fenced [`code block`][fcb], the [csv format][rfc4180] guidelines, and of course existing `table` extensions. 
+This implementation was inspired by [`fenced code blocks`][fcb], the [csv format][rfc4180] guidelines, and of course existing `table` extensions.
 
 ## Proposal
 
-A __table fence__ would be a sequence of at least 3 consecutive commas `,`. A table begins with a __table fence__, preceded by no spaces.
+A __table fence__ is a sequence of at least 3 consecutive commas `,`. A __table__ begins with a __table fence__, preceded by no spaces.
 
 [rfc4180]: https://datatracker.ietf.org/doc/html/rfc4180z
-The contents of a table follow the [csv format][rfc4180] guidelines with some necessary differences. 
+The contents of a __table__ follow the [csv format][rfc4180] guidelines with some significant differences.
 - Trailing spaces are not considered part of a field and should be ignored.
 - The first record is always the header line, the `<thead>`.
 
-A comma `,` or pipe `|` character can be used to separate values, a delimiter. To include a delimier (comma `,` or pipe `|`) as character in a field enclose the entire field in double-quotes `"`. 
+A comma `,` or pipe `|` character can be used to separate fields. To include a delimier (comma `,` or pipe `|`) as character in a field enclose the entire field in double-quotes `"`.
 
 > A delimiter must be used consistently per row (record).
 
