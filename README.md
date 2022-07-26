@@ -159,7 +159,7 @@ pipe      | "|"  | Yes
 
 ### Whitespace
 
-> Trailing whitespace is ignore
+Trailing whitespace are ignored.
 
 ```
 ,,,
