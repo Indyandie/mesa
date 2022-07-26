@@ -405,6 +405,8 @@ headings  , "# Header
 
 #### Linebreaks
 
+Use `\n` to create linebreaks within a cell.
+
 ```
 ,,,
 name       , block
