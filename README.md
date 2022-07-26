@@ -6,18 +6,18 @@ This implementation is inspired by [Fenced Code Blocks][fcb], the [CSV format][r
 
 ## Proposal
 
-A __table fence__ is a sequence of at least 3 consecutive commas `,`. A __table__ begins with a __table fence__, preceded by no spaces.
+A __table fence__ is a sequence of 3 consecutive commas `,`. A __table__ begins with a __table fence__, preceded by no spaces.
 
 [rfc4180]: https://datatracker.ietf.org/doc/html/rfc4180z
-The contents of a __table__ follow the [csv format][rfc4180] guidelines with some significant differences.
+The contents of a __table__ follow the [CSV Format][rfc4180] guidelines the following differences:
 - Trailing spaces are not considered part of a field and should be ignored.
 - The first record is always the header line, the `<thead>`.
 
 A comma `,` or pipe `|` character can be used to separate fields. To include a delimier (comma `,` or pipe `|`) as character in a field enclose the entire field in double-quotes `"`.
 
-> A delimiter must be used consistently per row (record).
+> Delimiters must be used consistently per row (record).
 
-Inline markdown is supported on individual fields. Block elements could potentially be supported inside of fields enclosed with double-quotes.
+Inline markdown is supported on individual fields. This allows the possibility of block elements inside of cells enclosed with double-quotes.
 
 The closing __table fence__ may be preceded by up to 3 spaces of indentation, and may be followed only by spaces or tabs, which are ignored.
 
