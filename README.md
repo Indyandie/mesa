@@ -418,7 +418,7 @@ headings   , "# Header\n## Another Header"
 
 ### Alignment 
 
-For alignment I think it could support existing implementations.
+Existing Table implementations use the colon `:` in the header fields to indicate alignment, which could work here as well.
 
 ```
 ,,,
@@ -427,9 +427,6 @@ Left            , Right                 , Center
 Stomp to the << , Stomp to the right >> , `2` hops this time, Left is default
 ,,,
 ```
-
-
-The colon `:` character could be used on the header fields to define alignment. Here's what I'm thinking. 
 
 > The colon would be treated as a regular character past the first row. 
 
