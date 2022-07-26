@@ -310,7 +310,9 @@ _italic_
 
 ### Blocks
 
-Leveraging double-quotes tables could potentially support blocks on individual fields. I am not sure if this is good idea though.
+Tables support block elements on individual cells by using double-quotes.
+
+> This requires some discussion to vet the pros and cons.
 
 ```
 name      , blocks
