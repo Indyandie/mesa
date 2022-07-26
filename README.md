@@ -1,4 +1,5 @@
-# Markdown Table
+# Markdown Table (Feedback)
+> This PR is only used for discussion and should not be merged. Instead, comments within this PR should lead to new issues which are resolved by the repository owner. This isn't to discourage raising PR's directly against changes but just a faster way to give lots of initial feedback.
 
 [fcb]: https://spec.commonmark.org/0.30/#fenced-code-blocks
 This implementation was inspired by [`fenced code blocks`][fcb], the [csv format][rfc4180] guidelines, and of course existing `table` extensions.
