@@ -403,8 +403,6 @@ headings  , "# Header
 </table>
 
 
-It doesn't look great but i really like the functionality. Perhaps some sort of newline character could help the presentation.
-
 #### Linebreaks
 
 ```
