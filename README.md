@@ -1,7 +1,7 @@
 # Markdown Table
 
 [fcb]: https://spec.commonmark.org/0.30/#fenced-code-blocks
-This implementation is inspired by [Fenced Code Blocks][fcb], the [CSV format][rfc4180] guidelines, and, of course, existing Table extensions.
+This implementation is inspired by [Fenced Code Blocks][fcb], the [CSV format][rfc4180] guidelines, and of course, existing Table extensions.
 
 ## Proposal
 
@@ -12,7 +12,7 @@ The contents of a **table** follow the [CSV Format][rfc4180] guidelines with the
 - Leading and trailing spaces are not considered part of a field and should be ignored.
 - The first record is always the header line, the `<thead>`.
 
-A comma `,` or pipe `|` character can be used to separate fields. To include a delimier (comma `,` or pipe `|`) as character in a field enclose the entire field in double-quotes `"`.
+A comma `,` or pipe `|` character can be used to separate fields. To include a delimiter (comma `,` or pipe `|`) as a character in a field enclose the entire field in double-quotes `"`.
 
 > Delimiters must be used consistently per row (record).
 
@@ -96,7 +96,7 @@ ichi , ni  , san
 
 ```
 ,,,
-delimiter | name | support
+delimiter | char | support
 comma     | ","  | Yes
 pipe      | "|"  | Yes
 ,,,
@@ -110,7 +110,7 @@ pipe      | "|"  | Yes
     <th>
       <tr>
         <th>delimiter</th>
-        <th>name</th>
+        <th>char</th>
         <th>pipe</th>
       </tr>
     </th>
@@ -137,7 +137,7 @@ pipe      | "|"  | Yes
     <th>
       <tr>
         <th>delimiter</th>
-        <th>name</th>
+        <th>char</th>
         <th>pipe</th>
       </tr>
     </th>
@@ -155,6 +155,36 @@ pipe      | "|"  | Yes
     </tr>
   </tbody>
 </table>
+
+#### Mix and match delimiters
+
+```
+,,,
+pipes1 | pipes2 | pipes3
+comma1 , comma2 , comma2
+comma1 , comma2 , comma2
+comma1 , comma2 , comma2
+comma1 , comma2 , comma2
+comma1 , comma2 , comma2
+,,,
+
+,,,
+comma1 , comma2 , comma2
+pipes1 | pipes2 | pipes3
+pipes1 | pipes2 | pipes3
+pipes1 | pipes2 | pipes3
+pipes1 | pipes2 | pipes3
+pipes1 | pipes2 | pipes3
+,,,
+
+,,,
+comma1 , comma2 , comma2
+pipes1 | pipes2 | pipes3
+comma1 , comma2 , comma2
+pipes1 | pipes2 | pipes3
+comma1 , comma2 , comma2
+pipes1 | pipes2 | pipes3
+```
 
 ### Whitespace
 
