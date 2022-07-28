@@ -1,24 +1,24 @@
 # Markdown Table
 
 [fcb]: https://spec.commonmark.org/0.30/#fenced-code-blocks
-This implementation was inspired by [`fenced code blocks`][fcb], the [csv format][rfc4180] guidelines, and of course existing `table` extensions.
+This implementation is inspired by [Fenced Code Blocks][fcb], the [CSV format][rfc4180] guidelines, and, of course, existing Table extensions.
 
 ## Proposal
 
-A __table fence__ is a sequence of at least 3 consecutive commas `,`. A __table__ begins with a __table fence__, preceded by no spaces.
+A **table fence** is a sequence of 3 or more consecutive commas `,`. A **table** begins with a **table fence**, preceded by no spaces.
 
 [rfc4180]: https://datatracker.ietf.org/doc/html/rfc4180z
-The contents of a __table__ follow the [csv format][rfc4180] guidelines with some significant differences.
-- Trailing spaces are not considered part of a field and should be ignored.
+The contents of a **table** follow the [CSV Format][rfc4180] guidelines with the following differences:
+- Leading and trailing spaces are not considered part of a field and should be ignored.
 - The first record is always the header line, the `<thead>`.
 
 A comma `,` or pipe `|` character can be used to separate fields. To include a delimier (comma `,` or pipe `|`) as character in a field enclose the entire field in double-quotes `"`.
 
-> A delimiter must be used consistently per row (record).
+> Delimiters must be used consistently per row (record).
 
-Inline markdown is supported on individual fields. Block elements could potentially be supported inside of fields enclosed with double-quotes.
+Inline markdown is supported on individual fields (cells). The CSV Format guidelines allow the possibility of supporting block elements inside of cells enclosed with double-quotes.
 
-The closing __table fence__ may be preceded by up to 3 spaces of indentation, and may be followed only by spaces or tabs, which are ignored.
+The closing **table fence** may be preceded by up to 3 spaces of indentation, and may be followed only by spaces or tabs, which are ignored.
 
 
 ### A basic table
@@ -158,7 +158,7 @@ pipe      | "|"  | Yes
 
 ### Whitespace
 
-> Trailing whitespace is ignore
+Leading and trailing whitespaces are ignored.
 
 ```
 ,,,
@@ -309,7 +309,9 @@ _italic_
 
 ### Blocks
 
-Leveraging double-quotes tables could potentially support blocks on individual fields. I am not sure if this is good idea though.
+Tables support block elements on individual cells by using double-quotes.
+
+> This requires some discussion to vet the pros and cons.
 
 ```
 name      , blocks
@@ -399,10 +401,11 @@ headings  , "# Header
   </tbody>
 </table>
 
-
-It doesn't look great but i really like the functionality. Perhaps some sort of newline character could help the presentation.
-
 #### Linebreaks
+
+Use `\n` to create linebreaks within a cell.
+
+> 🤔 Other options: `"ln"`, "br", "\n"
 
 ```
 ,,,
@@ -415,7 +418,7 @@ headings   , "# Header\n## Another Header"
 
 ### Alignment 
 
-For alignment I think it could support existing implementations.
+Existing Table implementations use the colon `:` in the header fields to indicate alignment, which could work here as well.
 
 ```
 ,,,
@@ -424,10 +427,6 @@ Left            , Right                 , Center
 Stomp to the << , Stomp to the right >> , `2` hops this time, Left is default
 ,,,
 ```
-
-
-The colon `:` character could be used on the header fields to define alignment. Here's what I'm thinking. 
-
 > The colon would be treated as a regular character past the first row. 
 
 ```
